@@ -1,0 +1,82 @@
+body {
+    font-family: "Mulish", sans-serif;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo .company-name {
+    margin-left: 10px;
+}
+
+.logo .company-name .ama {
+    color: #131318;
+    font-size: 36px;
+    font-weight: 800;
+
+}
+
+.logo .company-name .travels {
+    color: #FF5400;
+    font-size: 36px;
+    font-weight: 800;
+
+}
+
+.nav {
+    display: inline-flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+}
+
+.nav .home {
+    color: orange;
+}
+
+.nav .other {
+    color: #424247;
+}
+
+.logo-small {
+    display: none;
+    height: 24px;
+    width: 24px;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .nav {
+        display: none;
+    }
+    .company-name {
+        font-size: 20px;
+    }
+
+    .logo-small {
+        display: block;
+    }
+    .logo .company-name .ama,
+    .logo .company-name .travels {
+        font-size: 20px;
+    }
+}
