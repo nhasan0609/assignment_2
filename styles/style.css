@@ -1,8 +1,11 @@
+/* Common Styles */
 body {
     font-family: "Mulish", sans-serif;
     margin-left: 120px;
     margin-right: 120px;
+    margin-top: 50px;
 }
+/* Header section style */
 
 .header {
     display: flex;
@@ -47,7 +50,7 @@ body {
 }
 
 .nav .home {
-    color: orange;
+    color:#FF5400;
 }
 
 .nav .other {
@@ -59,7 +62,89 @@ body {
     height: 24px;
     width: 24px;
 }
+/* Banner section */
+.banner {
 
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 100px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.705) 0%, rgba(19, 19, 24, 0.00) 100%), url('/Images/Group\ 13\ \(1\)\ \(1\).png');
+    background-size: cover; 
+    background-position: center;  
+    position: relative;
+    height: 500px;
+    
+
+}  
+.banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+.banner-heading {
+    color: #FFF;
+    font-size: 50px;
+    font-weight: 800;
+    
+}
+.banner-description {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+.search-container {
+    display: inline-flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    border-style: none;
+}
+.banner-heading,
+.banner-description,
+.search-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.banner-heading {
+    top:10%;
+}
+
+.banner-description {
+    top: 40%;
+}
+
+.search-container {
+    top: 60%;
+}
+
+.search-container input[type="text"],
+.search-container select,
+.search-container button {
+    width: 174px;
+    height: 52px;
+    border-radius: 8px;
+    background: #FFF;
+    display:inline flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-container button img {
+    width: 24px;
+    height: 24px;
+    
+}
+.search-container button {
+    background: #FF5400;
+    color: #FFF;
+}
+/* Responsive for mobile devices <=600px */
 @media (max-width: 600px) {
     body {
         margin-left: 20px;
@@ -79,4 +164,27 @@ body {
     .logo .company-name .travels {
         font-size: 20px;
     }
+    .banner-heading {
+        font-size: 26px; /* Adjust the font size for smaller screens */
+        text-align: center;
+        top: 0%;
+    }
+    .banner-description {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+        text-align: center;
+        top: 20%
+    }
+    .search-container {
+        flex-direction: column; /* Stack the input fields vertically */
+        width: 80%;
+        top: 45%;
+        gap: 5px; /* Adjust the gap between input fields */
+    }
+    .search-container input[type="text"],
+    .search-container select,
+    .search-container button {
+        width: 100%; /* Make the input fields take up the full width */
+    }
+    
+
 }
