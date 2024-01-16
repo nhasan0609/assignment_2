@@ -134,6 +134,8 @@ body {
     display:inline flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    outline: none;
 }
 .search-container button img {
     width: 24px;
@@ -143,7 +145,129 @@ body {
 .search-container button {
     background: #FF5400;
     color: #FFF;
+    
 }
+
+/* popular tours section styles */
+.popular-tours {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.popular-tours .left-side {
+    width: 45%;
+}
+
+.popular-tours .right-side {
+    width: 45%;
+}
+
+.popular-tours .title {
+    color: #131318;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.popular-tours .description {
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.popular-tours .list-items {
+    list-style-type: disc;
+    margin-left: 10px;
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.popular-tours .find-now {
+    width: 174px;
+    height: 52px;
+    font-size: 20px;
+    border-radius: 8px;
+    background: #FF5400;
+    color: #FFF;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    outline: none;
+}
+
+.popular-tours .right-side img {
+    width: 540px;
+    height: 550px;
+    border-radius: 16px;
+}
+
+/* destination images styles */
+.destination-choice {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.destination-choice .title {
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.destination-choice .description {
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.destination-choice .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.destination-choice .row {
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+
+.destination-choice .image-container {
+    position: relative;
+    width: calc(50% - 10px);
+    height: 300px;
+    margin: 24px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.destination-choice .image-container img {
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    background: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), lightgray;
+}
+
+.destination-choice .image-container .image-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+
 /* Responsive for mobile devices <=600px */
 @media (max-width: 600px) {
     body {
@@ -185,6 +309,30 @@ body {
     .search-container button {
         width: 100%; /* Make the input fields take up the full width */
     }
-    
+    .popular-tours {
+        flex-direction: column;
+    }
 
+    .popular-tours .left-side,
+    .popular-tours .right-side {
+        width: 100%;
+    }
+    .popular-tours .find-now {
+        width: 100%; /* Make the button take up the full width on small screens */
+    margin-bottom: 30px;
+    }
+
+    .popular-tours .right-side img {
+        width: 100%;
+        height: auto;
+    }
+    .destination-choice .row {
+        flex-direction: column;
+    }
+
+    .destination-choice .image-container {
+        width: 375px;
+        height: 176px;
+        margin: 14px;
+    }
 }
